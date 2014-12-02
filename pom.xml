@@ -40,12 +40,23 @@
     </destDir>
     <requirejs>
       {
-      "paths": {
-      "ng-currency": "ng-currency"
-      }
+        "paths": {
+          "ng-currency": "ng-currency"
+        },
+        "shim": {
+          "ng-currency": ["angular"]
+        }
       }
     </requirejs>
   </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>angularjs</artifactId>
+      <version>1.2.27</version>
+    </dependency>
+  </dependencies>
 
   <build>
     <plugins>
@@ -84,7 +95,7 @@
                 <echo message="unzip archive..."/>
                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}"/>
                 <move todir="${destDir}">
-                  <fileset dir="${project.build.directory}/ng-currency-${upstream.version}">
+                  <fileset dir="${project.build.directory}/ng-currency-${upstream.version}/dist">
                   </fileset>
                 </move>
               </target>
