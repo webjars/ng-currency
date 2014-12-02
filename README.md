@@ -1,0 +1,2 @@
+webjars-ng-currency
+===================
