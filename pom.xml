@@ -11,7 +11,7 @@
   <packaging>jar</packaging>
   <groupId>org.webjars</groupId>
   <artifactId>ng-currency</artifactId>
-  <version>1.1.2-SNAPSHOT</version>
+  <version>1.1.2</version>
   <name>ng-currency</name>
   <description>WebJar for the ng-currency</description>
   <url>http://webjars.org</url>
@@ -28,7 +28,7 @@
     <url>http://github.com/webjars/ng-currency</url>
     <connection>scm:git:https://github.com/webjars/ng-currency.git</connection>
     <developerConnection>scm:git:https://github.com/webjars/ng-currency.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>ng-currency-1.1.2</tag>
   </scm>
 
   <properties>
@@ -89,10 +89,10 @@
             </goals>
             <configuration>
               <target>
-                <echo message="make tmp dir..."/>
-                <mkdir dir="${destDir}"/>
-                <echo message="unzip archive..."/>
-                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}"/>
+                <echo message="make tmp dir..." />
+                <mkdir dir="${destDir}" />
+                <echo message="unzip archive..." />
+                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
                 <move todir="${destDir}">
                   <fileset dir="${project.build.directory}/ng-currency-${upstream.version}/dist">
                   </fileset>
